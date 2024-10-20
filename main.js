@@ -11,5 +11,13 @@ document.addEventListener(`DOMContentLoaded`),() => {
         const selectedOption = sizeSelector.options[sizeSelector.selectedIndex];
         const newPrice = selectedOption.getAttribute(`data-price`);
         const stockStatus = selectedOption.getAttribute(`data-stock`);
+        
+//Task 3: Handle Stock Availability
+        productPrice.textContent= newPrice;
+        if(stockStatus === `out-of-stock`){
+            purchaseButton.disabled = true;
+        }else{
+            purchaseButton.disabled =false;
+        }
 });
 };
