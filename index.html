@@ -8,5 +8,21 @@
 <body>
     <h1>Main</h1>
     <script src="main.js"></script>
+
+    <!-- Task 1: Product Information Section -->
+    <h2 id="product-name">Generic White T-Shirt</h2>
+    <p id="product-price">Price: $<span id="current-price">30.00</span></p>
+
+    <!-- Size Selection Dropdown -->
+<label for="size-selector">Select Size:</label>
+    <select id="size-selector">
+        <option value="small" data-price="30" data-stock="in-stock">Small: In Stock</option>
+        <option value="medium"data-price="40" data-stock="in-stock">Medium: In Stock</option>
+        <option value="large"data-price="50" data-stock="in-stock">Large: In Stock</option>
+        <option value="extra large"data-price="60" data-stock="out-of-stock">Extra-Large: Out of Stock</option>
+    </select>
+
+    <button id="purchase-button">Purchase</button>
+
 </body>
 </html>
