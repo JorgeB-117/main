@@ -4,8 +4,7 @@ document.addEventListener(`DOMContentLoaded`),() => {
     const sizeSelector =document.getElementById(`size-selector`);
     const productPrice = document.getElementById(`product-price`);
     const purchaseButton =document.getElementById(`purchase-button`);
-    const addProductForm = document.getElementById('add-product-form');
-    const productList = document.getElementById('product-list');
+   
 
     sizeSelector.addEventListener(`change`, () => {
         const selectedOption = sizeSelector.options[sizeSelector.selectedIndex];
@@ -20,7 +19,6 @@ document.addEventListener(`DOMContentLoaded`),() => {
             purchaseButton.disabled =false;
         }
 });
-};
 
 //Task 4: Create a Checkout Event
 
@@ -33,3 +31,5 @@ purchaseButton.addEventListener(`click`, () => {
         alert(`Sorry for the inconvinece this is out of stock :(`);
     }
 });
+
+};
