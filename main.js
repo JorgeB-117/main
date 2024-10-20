@@ -11,7 +11,7 @@ document.addEventListener(`DOMContentLoaded`),() => {
         const selectedOption = sizeSelector.options[sizeSelector.selectedIndex];
         const newPrice = selectedOption.getAttribute(`data-price`);
         const stockStatus = selectedOption.getAttribute(`data-stock`);
-        
+
 //Task 3: Handle Stock Availability
         productPrice.textContent= newPrice;
         if(stockStatus === `out-of-stock`){
@@ -21,3 +21,15 @@ document.addEventListener(`DOMContentLoaded`),() => {
         }
 });
 };
+
+//Task 4: Create a Checkout Event
+
+purchaseButton.addEventListener(`click`, () => {
+    const selectedOption = sizeSelector.options[sizeSelector.selectedIndex];
+    const stockStatus = selectedOption.getAttribute(`data-stock`);
+    if (stockStatus === `in-stock`) {
+        alert(`Thank you for shopping with us!!!`);
+    } else {
+        alert(`Sorry for the inconvinece this is out of stock :(`);
+    }
+});
